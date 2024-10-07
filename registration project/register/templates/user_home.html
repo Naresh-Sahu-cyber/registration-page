@@ -1,0 +1,60 @@
+{% include 'navbar.html' %}
+<h1 class="container" style="text-align: center;">Registration form for new user</h1>
+<div class="row">
+    <div class="col-md-12">
+        <div class="container">
+            <div class="card">
+                <div class="cardbody" style="margin: 20px;">
+                    <form action="/registration/home/ " method="POST">
+                        {% csrf_token %} 
+                        <div class="mb-3">
+                        <label for="F_name" class="form-label">name</label>
+                        <input type="text" class="form-control" id="F_name"  name="F_name">
+                        </div>
+
+                        <div class="mb-3">
+                        <label for="L_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="L_name" name="L_name">
+                    s   </div>
+                        <div class="mb-3">
+                            <label for="user_id" class="form-label">user ID</label>
+                            <input type="text" class="form-control" id="user_id" name="user_id">
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="occupation" class="form-label">Occupation</label>
+                            <input type="text" class="form-control" id="occupation" name="occupation">
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone" name="phone">
+                        
+                        </div>
+                        <div class="mb-3">       
+                            <label for="department" class="form-label">Department</label>
+                            <select name="department" id="department" class="form-control"> 
+                                    <option value="ME">mechanicalengineering</option>
+                                    <option value="CS">computerscience</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">email</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        
+                        </div>
+
+                        <div class="mb-3 form-check">
+
+          
+                        <label class="form-check-label" for="working">working</label>
+                        <input type="checkbox" class="form-label" id="working" name="working">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
